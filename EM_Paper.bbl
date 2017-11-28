@@ -1,0 +1,246 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Andrews and Currim}{Andrews and
+  Currim}{2003}]{andrews2003retention}
+Andrews, R.~L. and I.~S. Currim (2003).
+\newblock Retention of latent segments in regression-based marketing models.
+\newblock {\em International Journal of Research in Marketing\/}~{\em 20\/}(4),
+  315--321.
+
+\bibitem[\protect\citeauthoryear{Bar-Shalom}{Bar-Shalom}{1978}]{bar1978tracking}
+Bar-Shalom, Y. (1978).
+\newblock Tracking methods in a multitarget environment.
+\newblock {\em Automatic Control, IEEE Transactions on\/}~{\em 23\/}(4),
+  618--626.
+
+\bibitem[\protect\citeauthoryear{Basu}{Basu}{2009}]{basu2009constrained}
+Basu, S. (2009).
+\newblock {\em Constrained clustering : Advances in algorithms, theory, and
+  applications}.
+\newblock Boca Raton: CRC Press.
+
+\bibitem[\protect\citeauthoryear{Berkhin}{Berkhin}{2006}]{Berkhin2006}
+Berkhin, P. (2006).
+\newblock {\em A Survey of Clustering Data Mining Techniques}, pp.\  25--71.
+\newblock Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+\bibitem[\protect\citeauthoryear{Bierbrauer, Tr{\"u}ck, and Weron}{Bierbrauer
+  et~al.}{2004}]{bierbrauer2004modeling}
+Bierbrauer, M., S.~Tr{\"u}ck, and R.~Weron (2004).
+\newblock Modeling electricity prices with regime switching models.
+\newblock In {\em Computational Science-ICCS 2004}, pp.\  859--867. Springer.
+
+\bibitem[\protect\citeauthoryear{B{\"o}hning}{B{\"o}hning}{2000}]{bohning2000computer}
+B{\"o}hning, D. (2000).
+\newblock {\em Computer-assisted analysis of mixtures and applications:
+  meta-analysis, disease mapping and others}, Volume~81.
+\newblock CRC press.
+
+\bibitem[\protect\citeauthoryear{Celeux and Diebolt}{Celeux and
+  Diebolt}{1985}]{celeux1985sem}
+Celeux, G. and J.~Diebolt (1985).
+\newblock The sem algorithm: a probabilistic teacher algorithm derived from the
+  em algorithm for the mixture problem.
+\newblock {\em Computational statistics quarterly\/}~{\em 2\/}(1), 73--82.
+
+\bibitem[\protect\citeauthoryear{Celeux and Govaert}{Celeux and
+  Govaert}{1992}]{celeux1992classification}
+Celeux, G. and G.~Govaert (1992).
+\newblock A classification em algorithm for clustering and two stochastic
+  versions.
+\newblock {\em Computational statistics \& Data analysis\/}~{\em 14\/}(3),
+  315--332.
+
+\bibitem[\protect\citeauthoryear{Chaganty and Liang}{Chaganty and
+  Liang}{2013}]{chaganty2013spectral}
+Chaganty, A.~T. and P.~Liang (2013).
+\newblock Spectral experts for estimating mixtures of linear regressions.
+\newblock {\em arXiv preprint arXiv:1306.3729\/}.
+
+\bibitem[\protect\citeauthoryear{Davidson and Basu}{Davidson and
+  Basu}{2007}]{davidson2007survey}
+Davidson, I. and S.~Basu (2007).
+\newblock A survey of clustering with instance level constraints.
+\newblock {\em ACM Transactions on Knowledge Discovery from Data\/}, 1--41.
+
+\bibitem[\protect\citeauthoryear{Davidson and Ravi}{Davidson and
+  Ravi}{2005}]{davidson2005agglomerative}
+Davidson, I. and S.~Ravi (2005).
+\newblock Agglomerative hierarchical clustering with constraints: Theoretical
+  and empirical results.
+\newblock In {\em European Conference on Principles of Data Mining and
+  Knowledge Discovery}, pp.\  59--70. Springer.
+
+\bibitem[\protect\citeauthoryear{Davidson, Ravi, and Ester}{Davidson
+  et~al.}{2007}]{davidson2007efficient}
+Davidson, I., S.~Ravi, and M.~Ester (2007).
+\newblock Efficient incremental constrained clustering.
+\newblock In {\em Proceedings of the 13th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pp.\  240--249. ACM.
+
+\bibitem[\protect\citeauthoryear{De~Veaux}{De~Veaux}{1989}]{de1989mixtures}
+De~Veaux, R.~D. (1989).
+\newblock Mixtures of linear regressions.
+\newblock {\em Computational Statistics \& Data Analysis\/}~{\em 8\/}(3),
+  227--245.
+
+\bibitem[\protect\citeauthoryear{Dempster, Laird, and Rubin}{Dempster
+  et~al.}{1977}]{dempster1977maximum}
+Dempster, A.~P., N.~M. Laird, and D.~B. Rubin (1977).
+\newblock Maximum likelihood from incomplete data via the em algorithm.
+\newblock {\em Journal of the royal statistical society. Series B
+  (methodological)\/}, 1--38.
+
+\bibitem[\protect\citeauthoryear{Dhillon, Fan, and Guan}{Dhillon
+  et~al.}{2001}]{dhillon2001efficient}
+Dhillon, I.~S., J.~Fan, and Y.~Guan (2001).
+\newblock Efficient clustering of very large document collections.
+\newblock {\em Data mining for scientific and engineering applications\/}~{\em
+  2}, 357--381.
+
+\bibitem[\protect\citeauthoryear{Diebolt and Robert}{Diebolt and
+  Robert}{1994}]{diebolt1994estimation}
+Diebolt, J. and C.~P. Robert (1994).
+\newblock Estimation of finite mixture distributions through bayesian sampling.
+\newblock {\em Journal of the Royal Statistical Society. Series B
+  (Methodological)\/}, 363--375.
+
+\bibitem[\protect\citeauthoryear{Faria and Soromenho}{Faria and
+  Soromenho}{2010}]{faria2010fitting}
+Faria, S. and G.~Soromenho (2010).
+\newblock Fitting mixtures of linear regressions.
+\newblock {\em Journal of Statistical Computation and Simulation\/}~{\em
+  80\/}(2), 201--225.
+
+\bibitem[\protect\citeauthoryear{Hurn, Justel, and Robert}{Hurn
+  et~al.}{2003}]{hurn2003estimating}
+Hurn, M., A.~Justel, and C.~P. Robert (2003).
+\newblock Estimating mixtures of regressions.
+\newblock {\em Journal of Computational and Graphical Statistics\/}~{\em
+  12\/}(1), 55--79.
+
+\bibitem[\protect\citeauthoryear{Law, Topchy, and Jain}{Law
+  et~al.}{2005}]{law2005model}
+Law, M.~H., A.~Topchy, and A.~K. Jain (2005).
+\newblock Model-based clustering with probabilistic constraints.
+\newblock In {\em Proceedings of the 2005 SIAM international conference on data
+  mining}, pp.\  641--645. SIAM.
+
+\bibitem[\protect\citeauthoryear{Lemke}{Lemke}{2006}]{lemke2006term}
+Lemke, W. (2006).
+\newblock {\em Term structure modeling and estimation in a state space
+  framework}, Volume 565.
+\newblock Springer Science \& Business Media.
+
+\bibitem[\protect\citeauthoryear{McLachlan and Peel}{McLachlan and
+  Peel}{2004}]{mclachlan2004finite}
+McLachlan, G. and D.~Peel (2004).
+\newblock {\em Finite mixture models}.
+\newblock John Wiley \& Sons.
+
+\bibitem[\protect\citeauthoryear{MORTIER, OU, and PICARD}{MORTIER
+  et~al.}{}]{mortierfinite}
+MORTIER, F., D.~OU, and N.~PICARD.
+\newblock Finite mixture of regression model and adaptive lasso selection
+  approaches to predict growth, mortality and recruitment of tropical tree
+  species.
+
+\bibitem[\protect\citeauthoryear{Newcomb}{Newcomb}{1886}]{newcomb1886generalized}
+Newcomb, S. (1886).
+\newblock A generalized theory of the combination of observations so as to
+  obtain the best result.
+\newblock {\em American Journal of Mathematics\/}, 343--366.
+
+\bibitem[\protect\citeauthoryear{Pearson}{Pearson}{1894}]{pearson1894contributions}
+Pearson, K. (1894).
+\newblock Contributions to the mathematical theory of evolution.
+\newblock {\em Philosophical Transactions of the Royal Society of London.
+  A\/}~{\em 185}, 71--110.
+
+\bibitem[\protect\citeauthoryear{Permuter, Francos, et~al.}{Permuter
+  et~al.}{2003}]{permuter2003gaussian}
+Permuter, H., J.~Francos, et~al. (2003).
+\newblock Gaussian mixture models of texture and colour for image database
+  retrieval.
+\newblock In {\em Acoustics, Speech, and Signal Processing, 2003.
+  Proceedings.(ICASSP'03). 2003 IEEE International Conference on}, Volume~3,
+  pp.\  III--569. IEEE.
+
+\bibitem[\protect\citeauthoryear{Quandt and Ramsey}{Quandt and
+  Ramsey}{1978}]{quandt1978estimating}
+Quandt, R.~E. and J.~B. Ramsey (1978).
+\newblock Estimating mixtures of normal distributions and switching
+  regressions.
+\newblock {\em Journal of the American statistical Association\/}~{\em
+  73\/}(364), 730--738.
+
+\bibitem[\protect\citeauthoryear{Reynolds, Rose, et~al.}{Reynolds
+  et~al.}{1995}]{reynolds1995robust}
+Reynolds, D., R.~C. Rose, et~al. (1995).
+\newblock Robust text-independent speaker identification using gaussian mixture
+  speaker models.
+\newblock {\em Speech and Audio Processing, IEEE Transactions on\/}~{\em
+  3\/}(1), 72--83.
+
+\bibitem[\protect\citeauthoryear{Segal, Wang, and Koller}{Segal
+  et~al.}{2003}]{segal2003discovering}
+Segal, E., H.~Wang, and D.~Koller (2003).
+\newblock Discovering molecular pathways from protein interaction and gene
+  expression data.
+\newblock {\em Bioinformatics\/}~{\em 19\/}(suppl 1), i264--i272.
+
+\bibitem[\protect\citeauthoryear{Stylianou, Pantazis, Calderero, Larroy,
+  Severin, Schimke, Bonal, Matta, and Valsamakis}{Stylianou
+  et~al.}{2005}]{stylianou2005gmm}
+Stylianou, Y., Y.~Pantazis, F.~Calderero, P.~Larroy, F.~Severin, S.~Schimke,
+  R.~Bonal, F.~Matta, and A.~Valsamakis (2005).
+\newblock Gmm-based multimodal biometric verification.
+\newblock In {\em eNTERFACE 2005 The summer Workshop on Multimodal Interfaces
+  July 18th--August 12th, Facult{\`e} Polytechnique de Mons, Belgium}.
+
+\bibitem[\protect\citeauthoryear{Tuma and Decker}{Tuma and
+  Decker}{2013}]{tuma2013finite}
+Tuma, M. and R.~Decker (2013).
+\newblock Finite mixture models in market segmentation: a review and
+  suggestions for best practices.
+\newblock {\em Electronic Journal of Business Research Methods\/}~{\em
+  11\/}(1).
+
+\bibitem[\protect\citeauthoryear{Wagstaff, Cardie, Rogers, and
+  Schr\"{o}dl}{Wagstaff et~al.}{2001}]{Wagstaff:2001}
+Wagstaff, K., C.~Cardie, S.~Rogers, and S.~Schr\"{o}dl (2001).
+\newblock Constrained k-means clustering with background knowledge.
+\newblock In {\em Proceedings of the Eighteenth International Conference on
+  Machine Learning}, ICML '01, San Francisco, CA, USA, pp.\  577--584. Morgan
+  Kaufmann Publishers Inc.
+
+\bibitem[\protect\citeauthoryear{Wagstaff}{Wagstaff}{2002}]{wagstaff2002intelligent}
+Wagstaff, K.~L. (2002).
+\newblock {\em Intelligent clustering with instance-level constraints}.
+\newblock Ph.\ D. thesis, Cornell University.
+
+\bibitem[\protect\citeauthoryear{Xing, Ng, Jordan, and Russell}{Xing
+  et~al.}{2002}]{xing2002distance}
+Xing, E.~P., A.~Y. Ng, M.~I. Jordan, and S.~Russell (2002).
+\newblock Distance metric learning with application to clustering with
+  side-information.
+\newblock In {\em NIPS}, Volume~15, pp.\ ~12.
+
+\bibitem[\protect\citeauthoryear{Yan, Zhang, Yang, and Hauptmann}{Yan
+  et~al.}{2006}]{yan2006discriminative}
+Yan, R., J.~Zhang, J.~Yang, and A.~G. Hauptmann (2006).
+\newblock A discriminative learning framework with pairwise constraints for
+  video object classification.
+\newblock {\em IEEE transactions on pattern analysis and machine
+  intelligence\/}~{\em 28\/}(4), 578--593.
+
+\bibitem[\protect\citeauthoryear{Yang, Yang, and Kafatos}{Yang
+  et~al.}{2001}]{yang2001feasible}
+Yang, K.-S., R.~Yang, and M.~Kafatos (2001).
+\newblock A feasible method to find areas with constraints using hierarchical
+  depth-first clustering.
+\newblock In {\em Scientific and Statistical Database Management, 2001. SSDBM
+  2001. Proceedings. Thirteenth International Conference on}, pp.\  257--262.
+  IEEE.
+
+\end{thebibliography}

@@ -1,0 +1,24 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: EM_Paper.aux
+The style file: Chicago.bst
+Database file #1: bibfile.bib
+Repeated entry---line 732 of file bibfile.bib
+ : @article{diebolt1994estimation
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 896 of file bibfile.bib
+ : @article{chaganty2013spectral
+ :                              ,
+I'm skipping whatever remains of this entry
+Warning--no number and no volume in chaganty2013spectral
+Warning--page numbers missing in chaganty2013spectral
+Warning--no number and no volume in davidson2007survey
+Warning--no number and no volume in dempster1977maximum
+Warning--no number and no volume in diebolt1994estimation
+Warning--empty year in mortierfinite
+Warning--no journal in mortierfinite
+Warning--no number and no volume in mortierfinite
+Warning--page numbers missing in mortierfinite
+Warning--no number and no volume in newcomb1886generalized
+Warning--page numbers missing in tuma2013finite
+Warning--can't use both volume and number fields in xing2002distance
+(There were 2 error messages)
