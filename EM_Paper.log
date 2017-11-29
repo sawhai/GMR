@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.8)  27 NOV 2017 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.6.8)  28 NOV 2017 11:38
 entering extended mode
 **./EM_Paper.tex
 (EM_Paper.tex
@@ -247,12 +247,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip46
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip47
+\enit@outerparindent=\dimen126
+\enit@toks=\toks21
+\enit@inbox=\box28
+\enitdp@description=\count112
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip47
-\bibsep=\skip48
+\bibhang=\skip48
+\bibsep=\skip49
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count112
+\c@NAT@ctr=\count113
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\commath\commath.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
@@ -263,24 +271,24 @@ Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen126
-\extrarowheight=\dimen127
-\NC@list=\toks21
-\extratabsurround=\skip49
-\backup@length=\skip50
+\col@sep=\dimen127
+\extrarowheight=\dimen128
+\NC@list=\toks22
+\extratabsurround=\skip50
+\backup@length=\skip51
 )
-\TX@col@width=\dimen128
-\TX@old@table=\dimen129
-\TX@old@col=\dimen130
-\TX@target=\dimen131
-\TX@delta=\dimen132
-\TX@cols=\count113
-\TX@ftn=\toks22
+\TX@col@width=\dimen129
+\TX@old@table=\dimen130
+\TX@old@col=\dimen131
+\TX@target=\dimen132
+\TX@delta=\dimen133
+\TX@cols=\count114
+\TX@ftn=\toks23
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen133
-\epsfysize=\dimen134
+\epsfxsize=\dimen134
+\epsfysize=\dimen135
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
@@ -291,14 +299,14 @@ nment
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count114
-\float@exts=\toks23
-\float@box=\box28
-\@float@everytoks=\toks24
-\@floatcapt=\box29
+\c@float@type=\count115
+\float@exts=\toks24
+\float@box=\box29
+\@float@everytoks=\toks25
+\@floatcapt=\box30
 )
-\@float@every@algorithm=\toks25
-\c@algorithm=\count115
+\@float@every@algorithm=\toks26
+\c@algorithm=\count116
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\algorithmicx\algpseudocode.sty"
 Package: algpseudocode 
@@ -307,16 +315,16 @@ Package: algpseudocode
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count116
-\c@ALG@rem=\count117
-\c@ALG@nested=\count118
-\ALG@tlm=\skip51
-\ALG@thistlm=\skip52
-\c@ALG@Lnr=\count119
-\c@ALG@blocknr=\count120
-\c@ALG@storecount=\count121
-\c@ALG@tmpcounter=\count122
-\ALG@tmplength=\skip53
+\c@ALG@line=\count117
+\c@ALG@rem=\count118
+\c@ALG@nested=\count119
+\ALG@tlm=\skip52
+\ALG@thistlm=\skip53
+\c@ALG@Lnr=\count120
+\c@ALG@blocknr=\count121
+\c@ALG@storecount=\count122
+\c@ALG@tmpcounter=\count123
+\ALG@tmplength=\skip54
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
@@ -340,28 +348,20 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen135
-\captionmargin@=\dimen136
-\captionwidth=\dimen137
-\caption@tempdima=\dimen138
-\caption@indent=\dimen139
-\caption@parindent=\dimen140
-\caption@hangindent=\dimen141
+\captionmargin=\dimen136
+\captionmargin@=\dimen137
+\captionwidth=\dimen138
+\caption@tempdima=\dimen139
+\caption@indent=\dimen140
+\caption@parindent=\dimen141
+\caption@hangindent=\dimen142
 )
-\c@ContinuedFloat=\count123
+\c@ContinuedFloat=\count124
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count124
-\c@subtable=\count125
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
-Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip54
-\enit@outerparindent=\dimen142
-\enit@toks=\toks26
-\enit@inbox=\box30
-\enitdp@description=\count126
+\c@subfigure=\count125
+\c@subtable=\count126
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\mathtools\mathtools.sty"
 Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
@@ -801,26 +801,45 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@dimlist=\toks41
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-(group_mixreg_defs.tex) (EM_Paper.aux)
+(group_mixreg_defs.tex) (EM_Paper.aux
+
+LaTeX Warning: Label `eq:avg:beta:err' multiply defined.
+
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+
+LaTeX Warning: Label `eq:temp:2' multiply defined.
+
+
+LaTeX Warning: Label `eq:tilde:def' multiply defined.
+
+)
 \openout1 = `EM_Paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 101.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
@@ -850,7 +869,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box46
-Package hyperref Info: Link coloring ON on input line 75.
+Package hyperref Info: Link coloring ON on input line 101.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -860,9 +879,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count175
 )
-LaTeX Info: Redefining \ref on input line 75.
-LaTeX Info: Redefining \pageref on input line 75.
-LaTeX Info: Redefining \nameref on input line 75.
+LaTeX Info: Redefining \ref on input line 101.
+LaTeX Info: Redefining \pageref on input line 101.
+LaTeX Info: Redefining \nameref on input line 101.
 
 (EM_Paper.out) (EM_Paper.out)
 \@outlinefile=\write5
@@ -906,31 +925,32 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 90.
-LaTeX Font Info:    Try loading font information for U+msa on input line 90.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 116.
+LaTeX Font Info:    Try loading font information for U+msa on input line 116.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 90.
+LaTeX Font Info:    Try loading font information for U+msb on input line 116.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 90.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 116.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <7> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 130.
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
@@ -939,211 +959,40 @@ Non-PDF special ignored!
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 116.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 119.
-
-
-Package natbib Warning: Citation `newcomb1886generalized' on page 2 undefined o
-n input line 119.
-
-
-Package natbib Warning: Citation `pearson1894contributions' on page 2 undefined
- on input line 119.
-
-
-Package natbib Warning: Citation `reynolds1995robust' on page 2 undefined on in
-put line 119.
-
-
-Package natbib Warning: Citation `permuter2003gaussian' on page 2 undefined on 
-input line 119.
-
-
-Package natbib Warning: Citation `lemke2006term' on page 2 undefined on input l
-ine 119.
-
-
-Package natbib Warning: Citation `stylianou2005gmm' on page 2 undefined on inpu
-t line 119.
-
-
-Package natbib Warning: Citation `tuma2013finite' on page 2 undefined on input 
-line 119.
-
-
-Package natbib Warning: Citation `bierbrauer2004modeling' on page 2 undefined o
-n input line 122.
-
-
-Package natbib Warning: Citation `andrews2003retention' on page 2 undefined on 
-input line 122.
-
-
-Package natbib Warning: Citation `bar1978tracking' on page 2 undefined on input
- line 122.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 142.
 
 [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 140.
-
-
-Package natbib Warning: Citation `de1989mixtures' on page 3 undefined on input 
-line 141.
-
-
-Package natbib Warning: Citation `quandt1978estimating' on page 3 undefined on 
-input line 141.
-
-
-Package natbib Warning: Citation `dempster1977maximum' on page 3 undefined on i
-nput line 141.
-
-
-Package natbib Warning: Citation `celeux1985sem' on page 3 undefined on input l
-ine 142.
-
-
-Package natbib Warning: Citation `celeux1992classification' on page 3 undefined
- on input line 142.
-
-
-Package natbib Warning: Citation `faria2010fitting' on page 3 undefined on inpu
-t line 142.
-
-
-Package natbib Warning: Citation `diebolt1994estimation' on page 3 undefined on
- input line 142.
-
-
-Package natbib Warning: Citation `hurn2003estimating' on page 3 undefined on in
-put line 142.
-
-
-Package natbib Warning: Citation `chaganty2013spectral' on page 3 undefined on 
-input line 142.
-
-
-Package natbib Warning: Citation `Wagstaff:2001' on page 3 undefined on input l
-ine 149.
-
-
-LaTeX Warning: Reference `fig:fig1' on page 3 undefined on input line 149.
-
-
-LaTeX Warning: Reference `fig:sfig1' on page 3 undefined on input line 149.
-
-
-LaTeX Warning: Reference `fig:sfig2' on page 3 undefined on input line 149.
-
-
-Package natbib Warning: Citation `Berkhin2006' on page 3 undefined on input lin
-e 149.
-
-
-Package natbib Warning: Citation `basu2009constrained' on page 3 undefined on i
-nput line 149.
-
-
-Package natbib Warning: Citation `davidson2007survey' on page 3 undefined on in
-put line 149.
-
-
-Package natbib Warning: Citation `wagstaff2002intelligent' on page 3 undefined 
-on input line 149.
-
-
-Package natbib Warning: Citation `xing2002distance' on page 3 undefined on inpu
-t line 149.
-
-
-Package natbib Warning: Citation `davidson2007efficient' on page 3 undefined on
- input line 149.
-
-
-Package natbib Warning: Citation `davidson2005agglomerative' on page 3 undefine
-d on input line 149.
-
-
-Package natbib Warning: Citation `law2005model' on page 3 undefined on input li
-ne 149.
-
-
-Package natbib Warning: Citation `yang2001feasible' on page 3 undefined on inpu
-t line 149.
-
-
-Package natbib Warning: Citation `yan2006discriminative' on page 3 undefined on
- input line 149.
-
-
-Package natbib Warning: Citation `segal2003discovering' on page 3 undefined on 
-input line 149.
-
-
-Package natbib Warning: Citation `dhillon2001efficient' on page 3 undefined on 
-input line 149.
-
-[3] <fmr.png, id=100, 362.7954pt x 329.5512pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 166.
+ [3] <fmr.png, id=168, 362.7954pt x 329.5512pt>
 File: fmr.png Graphic file (type png)
  <use fmr.png>
-Package pdftex.def Info: fmr.png used on input line 153.
+Package pdftex.def Info: fmr.png used on input line 181.
 (pdftex.def)             Requested size: 234.8775pt x 213.36093pt.
 
-<fmr_const.png, id=101, 362.7954pt x 329.5512pt>
+<fmr_const.png, id=169, 362.7954pt x 329.5512pt>
 File: fmr_const.png Graphic file (type png)
  <use fmr_const.png>
-Package pdftex.def Info: fmr_const.png used on input line 158.
+Package pdftex.def Info: fmr_const.png used on input line 186.
 (pdftex.def)             Requested size: 253.95505pt x 230.68425pt.
 
-Overfull \hbox (2.28001pt too wide) in paragraph at lines 151--162
+Overfull \hbox (2.28001pt too wide) in paragraph at lines 179--190
 []$[]$ $[]$ 
  []
 
 
-Overfull \hbox (0.8468pt too wide) in paragraph at lines 168--170
-\OT1/ptm/m/n/12 de-noted with la-bels $\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R\OT1/
-cmr/m/n/12 ] []= \OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; [] ; R\O
-MS/cmsy/m/n/12 g$\OT1/ptm/m/n/12 . In each group $\OML/cmm/m/it/12 r \OMS/cmsy/
-m/n/12 2 \OT1/cmr/m/n/12 [\OML/cmm/m/it/12 R\OT1/cmr/m/n/12 ]$\OT1/ptm/m/n/12 ,
- we ob-serve $\OML/cmm/m/it/12 n[]$ \OT1/ptm/m/n/12 sam-ples $\OT1/cmr/m/n/12 (
-\OML/cmm/m/it/12 y[]; x[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; i \OT1/cmr/m/n/12 
-=
+Overfull \hbox (0.44371pt too wide) in paragraph at lines 196--197
+\OT1/ptm/m/n/12 We as-sume that the ob-ser-va-tions be-long to $\OML/cmm/m/it/1
+2 R$ \OT1/ptm/m/it/12 known groups\OT1/ptm/m/n/12 , de-noted with la-bels $\OT1
+/cmr/m/n/12 [\OML/cmm/m/it/12 R\OT1/cmr/m/n/12 ] []= \OMS/cmsy/m/n/12 f\OT1/cmr
+/m/n/12 1\OML/cmm/m/it/12 ; [] ; R\OMS/cmsy/m/n/12 g$\OT1/ptm/m/n/12 .
  []
 
-[4 <./fmr.png (PNG copy)> <./fmr_const.png (PNG copy)>]
-
-LaTeX Warning: Reference `eq:gauss:mixreg:model' on page 5 undefined on input l
-ine 206.
-
-
-LaTeX Warning: Reference `eq:likelihod' on page 5 undefined on input line 215.
-
-[5]
-
-LaTeX Warning: Reference `eq:likelihod' on page 6 undefined on input line 224.
-
-
-LaTeX Warning: Reference `eq:posterior:memebership' on page 6 undefined on inpu
-t line 231.
-
-
-LaTeX Warning: Reference `eq:predict:post' on page 6 undefined on input line 24
-4.
-
-
-LaTeX Warning: Reference `eq:likelihod' on page 6 undefined on input line 252.
-
-[6]
-
-LaTeX Warning: Reference `eq:loglik' on page 7 undefined on input line 261.
-
-
-LaTeX Warning: Reference `eq:posterior:memebership' on page 7 undefined on inpu
-t line 270.
-
-
-Overfull \hbox (4.10295pt too wide) in paragraph at lines 273--274
+[4 <./fmr.png (PNG copy)> <./fmr_const.png (PNG copy)>] [5]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 257.
+ [6]
+Overfull \hbox (4.10295pt too wide) in paragraph at lines 300--301
 []\OT1/ptm/m/n/12 We then max-i-mize $\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/c
 mm/m/it/12 \OT1/cmr/m/n/12 ; [])$ \OT1/ptm/m/n/12 over $\OML/cmm/m/it/12 $\OT
 1/ptm/m/n/12 , giv-ing the up-date rule for the pa-ram-e-ters $\OML/cmm/m/it/12
@@ -1152,182 +1001,176 @@ mm/m/it/12 \OT1/cmr/m/n/12 ; [])$ \OT1/ptm/m/n/12 over $\OML/cmm/m/it/12 $\OT
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 278.
-
-LaTeX Warning: Reference `alg:gmr' on page 7 undefined on input line 319.
-
-
-LaTeX Warning: Reference `sec:EM:details' on page 7 undefined on input line 319
-.
-
-
-LaTeX Warning: Reference `tab:exp' on page 7 undefined on input line 327.
-
-[7]
-
-LaTeX Warning: Reference `tab:exp' on page 8 undefined on input line 343.
-
-[8]
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 348.
-
-
-LaTeX Warning: Reference `eq:bet_err' on page 9 undefined on input line 349.
-
-[9] [10]
+put line 305.
+[7] [8] [9] [10] [11]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 378.
+               Default added (so using `tbp') on input line 423.
 
 
-Overfull \vbox (4.88567pt too high) detected at line 387
+Overfull \vbox (4.88567pt too high) detected at line 432
  []
 
 
-Overfull \vbox (4.88567pt too high) detected at line 391
+Overfull \vbox (4.88567pt too high) detected at line 436
  []
 
 
-Overfull \vbox (4.88567pt too high) detected at line 395
- []
-
-[11]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 407.
-
-
-Overfull \vbox (4.88567pt too high) detected at line 416
- []
-
-
-Overfull \vbox (4.88567pt too high) detected at line 420
- []
-
-
-Overfull \vbox (4.88567pt too high) detected at line 424
+Overfull \vbox (4.88567pt too high) detected at line 440
  []
 
 [12]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 436.
+               Default added (so using `tbp') on input line 452.
 
 
-Overfull \vbox (4.88567pt too high) detected at line 445
+Overfull \vbox (4.88567pt too high) detected at line 461
  []
 
 
-Overfull \vbox (4.88567pt too high) detected at line 449
+Overfull \vbox (4.88567pt too high) detected at line 465
  []
 
 
-Overfull \vbox (4.88567pt too high) detected at line 453
+Overfull \vbox (4.88567pt too high) detected at line 469
  []
 
 [13]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 465.
+               Default added (so using `tbp') on input line 481.
 
 
-Overfull \vbox (4.88567pt too high) detected at line 474
+Overfull \vbox (4.88567pt too high) detected at line 490
  []
 
 
-Overfull \vbox (4.88567pt too high) detected at line 478
+Overfull \vbox (4.88567pt too high) detected at line 494
  []
 
 
-Overfull \vbox (4.88567pt too high) detected at line 482
+Overfull \vbox (4.88567pt too high) detected at line 498
  []
 
 [14]
-Overfull \hbox (8.49957pt too wide) in paragraph at lines 495--495
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 510.
+
+
+Overfull \vbox (4.88567pt too high) detected at line 519
+ []
+
+
+Overfull \vbox (4.88567pt too high) detected at line 523
+ []
+
+
+Overfull \vbox (4.88567pt too high) detected at line 527
+ []
+
+[15]
+Overfull \hbox (8.49957pt too wide) in paragraph at lines 540--540
 []\OT1/ptm/b/n/17.28 Case Study: De-riv-ing Rec-om-men-da-tions for Au-to-mo-ti
 ve Deal-
  []
 
-[15
-
-
-
-
-
-
-
-
-]
-
-LaTeX Warning: Reference `eq:temp:1' on page 16 undefined on input line 534.
-
 [16
 
+
+
+
+
+
+
+
 ]
+Overfull \hbox (2.07927pt too wide) in paragraph at lines 577--579
+\OT1/ptm/m/n/12 ignoring the con-stant terms gen-er-ated by $\OML/cmm/m/it/12 y
+[]$\OT1/ptm/m/n/12 . Note that $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 []x[]\OT1/cm
+r/m/n/12 )[] = (\OML/cmm/m/it/12 []x[]\OT1/cmr/m/n/12 )(\OML/cmm/m/it/12 x[][
+]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]x
+[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 []$\OT1/ptm/m/n/12 .
+ []
 
-LaTeX Warning: Reference `eq:temp:2' on page 17 undefined on input line 554.
+[17
+
+]
+Overfull \hbox (15.95879pt too wide) in paragraph at lines 610--617
+\OT1/ptm/m/n/12 Dividing and mul-ti-ply-ing by $\OML/cmm/m/it/12 w[]$ \OT1/ptm/
+m/n/12 and sum-ming over $\OML/cmm/m/it/12 r$ \OT1/ptm/m/n/12 in [], we get $\O
+ML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 \OT1/cmr/m/n/12 ; []) [][] \
+OMS/cmsy/m/n/12   [][] []\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 [][][] \OMS/cmsy/m
+/n/12  
+ []
+
+[18]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hbox' on input line 636.
 
 
-LaTeX Warning: Reference `eq:w:def' on page 17 undefined on input line 571.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathsurround' on input line 636.
 
 
-LaTeX Warning: Reference `eq:temp:495' on page 17 undefined on input line 579.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 636.
 
-[17] [18] [19] (EM_Paper.bbl [20
 
-] [21])
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\unskip' on input line 636.
 
-Package natbib Warning: There were undefined citations.
 
-[22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 623.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 623.
- (EM_Paper.aux
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@italiccorr' on input line 636.
 
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
+[19] (EM_Paper.bbl [20
 
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 623.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 623.
+] [21]) [22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 656.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 656.
+ (EM_Paper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 656.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 656.
 Package rerunfilecheck Info: File `EM_Paper.out' has not changed.
-(rerunfilecheck)             Checksum: BA20E00E4CA972641E4B3BA3DB716987;1195.
+(rerunfilecheck)             Checksum: 36A0F1080664FB8FFEF477F67A22CC68;1207.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 623.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 656.
  ) 
 Here is how much of TeX's memory you used:
- 20403 strings out of 493335
- 366477 string characters out of 3136678
- 454118 words of memory out of 3000000
- 23373 multiletter control sequences out of 15000+200000
+ 20415 strings out of 493335
+ 366634 string characters out of 3136678
+ 459036 words of memory out of 3000000
+ 23393 multiletter control sequences out of 15000+200000
  42206 words of font info for 101 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,19n,56p,1643b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EM_Paper.pdf (22 pages, 548705 bytes).
+ 62i,19n,56p,1216b,511s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{equation.2.10} has been referenced but does not e
+xist, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
+/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on EM_Paper.pdf (22 pages, 556783 bytes).
 PDF statistics:
- 344 PDF objects out of 1000 (max. 8388607)
- 118 named destinations out of 1000 (max. 500000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
  159 words of extra memory for PDF output out of 10000 (max. 10000000)
 

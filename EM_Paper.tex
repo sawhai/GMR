@@ -4,6 +4,10 @@
 \usepackage{enumerate}
 \RequirePackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
 
+
+
+%\usepackage[shortlabels]{enumitem}
+\usepackage[shortlabels,inline]{enumitem}
 \usepackage{natbib}
 \usepackage{url} % not crucial - just used below for the URL 
 \usepackage{commath}
@@ -21,7 +25,7 @@
 \usepackage{subcaption}
 %\usepackage{graphicx}
 \usepackage{float}
-\usepackage[shortlabels]{enumitem}
+
 \setlist[enumerate, 1]{1\textsuperscript{o}}
 \usepackage{mathtools}
 \usepackage{caption}
@@ -54,6 +58,27 @@
 \usepackage{setspace}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[%citestyle=alphabetic,
+%			%bibstyle=authoryear,
+%			style=alphabetic,
+%			backend=bibtex,
+%			doi=false,
+%			isbn=false,
+%			url=false,
+%			firstinits=true,
+%			maxnames=4
+%			]{biblatex}
+%
+%\addbibresource{Bibfile}
+%
+%\makeatletter
+%\def\blx@maxline{77}
+%\makeatother
+%\renewbibmacro{in:}{}           
+%\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{citetitle}{#1}
+%\DeclareFieldFormat[article,inbook,incollection,inproceedings,patent,thesis,unpublished]{title}{#1} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\pdfminorversion=4
 % NOTE: To produce blinded version, replace "0" with "1" below.
@@ -70,6 +95,7 @@
 %%\DeclareMathOperator*{\argmin}{arg\,min}
 
 \input{group_mixreg_defs}
+
 
 
 \begin{document}
@@ -114,7 +140,7 @@
 \spacingset{1.45} % DON'T change the spacing!
 
 \section{Introduction}
-\aaa{Another good title is ``Mixture of regressions with group structure''}
+%\aaa{Another good title is ``Mixture of regressions with group structure''}
 \label{sec:intro}
 One of the challenges in modeling certain populations is that the  observations might be drawn from different distributions/processes underlying the overall population. In such cases, a ``single" model may fail to efficiently represent the sample data and therefore the accuracy and reliability of the model might suffer. This problem has been identified more than hundred years ago \citep{newcomb1886generalized, pearson1894contributions} and ``mixture" models were introduced in order to better account for the unobserved heterogeneity in the population. Since those early days, a lot of effort has gone into developing new methodologies and to further improve the modeling. In recent years, due to increasing  availability and diversity of data, the topic has experienced an increasing attention by researchers. Mixture models have been successfully employed in a variety of diverse applications such as speech recognition \citep{reynolds1995robust}, image retrieval \citep{permuter2003gaussian}, term structure modeling \citep{lemke2006term}, biometric verification \citep{stylianou2005gmm}, and market segmentation \citep{tuma2013finite}.
 
@@ -125,7 +151,7 @@ Among the family of mixture models, the finite mixture of linear regression (FMR
 Assuming that the dataset consists of $n$ observations $(y_i,x_i), i=1,\dots n$, let $y_i$ denote the value of response variable for the $i^{th}$ observation, and $x_i$ the corresponding $p \times 1$ vector of independent variables (for brevity, we exclude the intercept from the notation).
 Let $y = (y_1, y_2, \dots, y_n) \in \reals^n$ be the response vector, and $X= (x_1, x_2, \dots, x_n) \in \reals^{n \times p}$ the design matrix.
 The whole population in this case can be represented as: \aaa{this is not quite correct,... but not sure if it is necessary to give the details here. We will use different notation for the grouped data later on.}
-\textcolor{red}{Do you suggest to remove this?}
+\textcolor{red}{HA: Do you suggest to remove this?}
 %
 \begin{align}
 Y = \sum_{k=1}^{K} \alpha_k (X^{T} \beta_k)+\eps_k \qquad  k =1,...,K
@@ -139,14 +165,15 @@ where $Y$ is the $n*1$ vector of response variables, $X$ is the covariate matrix
 
 \subsection{Estimating the Parameters for Mixture Models}
 While the parameter estimation in mixture models has been studied mainly from a likelihood point of view \citep{de1989mixtures}, \citep{quandt1978estimating} used a moment generating function for estimating the parameters. However, maximum likelihood approach using expectation maximization (EM) \citep{dempster1977maximum} remains the most widely used technique for estimating the parameters of FMR. EM approach tries to maximize the likelihood in a way that in each iteration, it is guaranteed that the value of likelihood increases. 
-Other algorithms such as stochastic EM \citep{celeux1985sem} and classification EM \citep{celeux1992classification} have been introduced as an attempt to improve the EM algorithm (see \citep{faria2010fitting}). Others have used Gibbs sampler \citep{diebolt1994estimation}), and Bayesian approach for estimation \citep{hurn2003estimating}. \citep{chaganty2013spectral} employed low-rank regression with a tensor power method as an alternative to EM algorithm for estimating the parameters. 
+Other algorithms such as stochastic EM \citep{celeux1985sem} and classification EM \citep{celeux1992classification} have been introduced as an attempt to improve the performance of the EM algorithm (see \citep{faria2010fitting}). Others have employed Gibbs sampler \citep{diebolt1994estimation}), and Bayesian approach for estimation \citep{hurn2003estimating}. \citep{chaganty2013spectral} employed low-rank regression with a tensor power method as an alternative to EM algorithm for estimating the parameters. 
 
 
 
-\subsection{FMR with must-link constraint}
-\aaa{I also like group structure}
-The outcome of any mixture model provides the class membership for each observation, along with the probability (proportion) for each component and the parameters of the model. This results is (soft) clustering the observations into $K$ clusters.
-In some applications however, instead of individual observations, groups of observations need to be clustered. In other words, sometimes it is desirable to force groups of observations to stay in the same cluster. This problem is similar to what is known as "clustering with must-link constraint", which is introduced by Wagstaff and Cardie (2000) in the literature \citep{Wagstaff:2001}. The main idea is to utilize experts domain knowledge prior to clustering process in order to obtain  desired properties from the clustering solution. Figure \ref{fig:fig1} illustrates the concept. The data points are synthetically generated using: $y_1 = \frac{1}{2}x+\epsilon_1$ and $ y_2 = \frac{3}{4}x+\epsilon_2$, where $x \sim \mathcal{N}(0,1)$, $\epsilon_1 \sim \mathcal{N}(0,0.5)$, and $\epsilon_2 \sim \mathcal{N}(0,0.3)$. Figure~\ref{fig:sfig1} shows the linear relationship between the two groups ($y_1$ and $y_2$), without any grouping (linked) structure. In figure \ref{fig:sfig2}, the data points are linked to create six (6) groups (groups 1-3 belong to $y_1$ and groups 4-6 belong to $y_2$). The data points with the same color refer to the same group. The desired outcome is that all the data points in the same group end up having the same class membership. We refer to \citep{Berkhin2006, basu2009constrained, davidson2007survey, wagstaff2002intelligent, xing2002distance, davidson2007efficient, davidson2005agglomerative, law2005model, yang2001feasible, yan2006discriminative, segal2003discovering, dhillon2001efficient} for further readings and applications of constrained clustering. \par
+\subsection{FMR with Group Structure}
+Under regular FMR, the outcome is a mixture model that provides class membership for each observation of the dataset along with probability (proportion) for each component and the parameters of the model. This results in (soft) clustering the different observations into $K$ clusters, assuming $K$ components are employed.
+In some applications however, instead of individual observations, groups of observations need to be clustered or associated with the same component. For example, if FMR is being employed to model data from a retail chain, it might be necessary to associate all observations stemming from any single store to the same component.
+This problem is similar to what is known as "clustering with must-link constraint", which is introduced by Wagstaff and Cardie (2000) in the literature \citep{Wagstaff:2001}. The main idea is to utilize experts domain knowledge prior to clustering process in order to obtain  desired properties from the clustering solution. Figure \ref{fig:fig1} illustrates the concept. The data points are synthetically generated using two components: $y_1 = \frac{1}{2}x+\epsilon_1$ and $ y_2 = \frac{3}{4}x+\epsilon_2$, where $x \sim \mathcal{N}(0,1)$, $\epsilon_1 \sim \mathcal{N}(0,0.5)$, and $\epsilon_2 \sim \mathcal{N}(0,0.3)$. Figure~\ref{fig:sfig1} shows the linear relationship between the two groups ($y_1$ and $y_2$), without any grouping (must-link) structure. In figure \ref{fig:sfig2}, the data points are linked to create six (6) groups (groups 1-3 belong to $y_1$ and groups 4-6 belong to $y_2$). The data points with the same color refer to the same group. The desired outcome is that all the data points in the same group end up having the same class membership. See \cite{basu2009constrained} for an extensive review of constrained clustering algorithms and applications.
+
 \begin{figure}[ht]
 \begin{subfigure}{.5\textwidth}
 \centering
@@ -159,13 +186,12 @@ In some applications however, instead of individual observations, groups of obse
 
 \caption{\footnotesize{}}\label{fig:sfig2}
 \end{subfigure}
-\caption{FMR with "must-link" constraint: (a) Synthetic, two component FMR without any constraint. (b) The same data points being divided into six groups where each group has to retain its data points.}\label{fig:fig1}
+\caption{FMR with "group" constraint: (a) Synthetic, two component FMR without any constraint. (b) The same data points being divided into six groups where each group has to retain its data points.}\label{fig:fig1}
 \end{figure}
 
-To the best of our knowledge, all the existing algorithms have solved the problem of clustering with must-link constraint in unsupervised/semi-supervised settings, meaning that the observations lack (or partially lack) the dependent variable. In other words, we couldn't find any work that addresses the issue of model based clustering using FMMs \aaa{What is FMM?} with must-link constraint.
-
+To the best of our knowledge, all the existing algorithms have solved the problem of clustering with group structure in unsupervised/semi-supervised settings, meaning that the observations lack (or partially lack) the dependent variable. In other words, we could not find any work that addresses FMR with group structure; contribution of this manuscript.
 \subsection{Grouped mixture of regression}\label{sec:model}
-\aaa{Major changes in this section...}
+%\aaa{Major changes in this section...}
 We assume that the observations belong to $R$ \emph{known groups}, denoted with labels $[R] := \{1,\dots,R\}$. In each group $r \in [R]$, we observe $n_r$ samples $(y_{ri},x_{ri}), i=1,\dots,n_r$ where $y_{ri} \in \reals$ is the response variable and $x_{ri} \in \reals^p$ is the vector of covariates or features.  We will write $x_{rij}$ to denote the $j^{th}$ feature in the feature vector $x_{ri}$. For the most part, we will treat $x_{ri}$ as deterministic observations, i.e., we have fixed design regression models.
 
 We assume that there are $K$ latent (unobserved) clusters such that all the observations in group $r$ belong to that cluster. Thus, we can assign a cluster membership variable $z_{r} \in \{0,1\}^K$ to each group $r \in [R]$. We will have $z_{rk} = 1$ iff group $r$ belongs to cluster $k$.  With some abuse of notation, we also write $z_r = k$ in place of $z_{rk} = 1$.
@@ -182,7 +208,7 @@ Given the cluster membership variable $z_r$, we assume that the group $r$ observ
 \begin{align}\label{eq:gauss:mixreg:model}
 	p(y_{ri} \cond z_{r} = k) \stackrel{\text{indept}}{\sim } N( \beta_k^T x_{ri}, \sigma_r^2), \; i =1,\dots,n_r,
 \end{align}
-where $\beta_k \in \reals^p$ is the coefficient vector the $k^{th}$ regression model and $\sigma_r^2$ is the noise variance for group $r$. Note that we are assuming that the noise level only depends on the group and not on the underlying cluster. \aaa{Might need some justification.} We write $\beta = (\beta_1 \mid \dots \mid \beta_K) \in \reals^{p \times K}$ and $\sigma^2 = (\sigma_1^2,\dots,\sigma_R^2) \in \reals^R$.
+where $\beta_k \in \reals^p$ is the coefficient vector the $k^{th}$ regression model and $\sigma_r^2$ is the noise variance for group $r$. Note that we are assuming that the noise level only depends on the group and not on the underlying cluster. \aaa{Might need some justification.} \textcolor{red}{HA: How can we justify?} We write $\beta = (\beta_1 \mid \dots \mid \beta_K) \in \reals^{p \times K}$ and $\sigma^2 = (\sigma_1^2,\dots,\sigma_R^2) \in \reals^R$.
 
 %Given the clusters that they belong to ($z_{rk}$),  the dependent variables ($y_{ri}$) in a particular group follow a Gaussian distribution with mean $ \beta_k^T x_{ri}$, which is the estimation of $y$ using the regression model for group $r$, and variance $\sigma_r^2$. That is: 
 
@@ -321,52 +347,70 @@ To derive the update rules, we maximize $F(\theta;\thh)$ by a sequential block c
 
 
 \section{Empirical analysis}
+\aaa{Needs a little summary of what is going on in this section}
+
+\aaa{Must comment somewhere that we turn soft labels to hard labels by MAP rule.}
 \subsection{Synthetic data simulations}
 To evaluate the effectiveness of the EM algorithm for FMR with group structure constraints, we employ Monte Carlo simulation experiments.
-\subsection{Experiment Setup}
-Table~\ref{tab:exp} summarizes the varying parameters that is used for the simulation.
-Covariates ($X \in {\rm I\!R}^p$) for each component are generated by drawing samples from a multivariate Gaussian distribution:  $X \sim  \mathcal{N}(\boldsymbol{{\mu}} , \boldsymbol{{\Sigma}})$, with $\boldsymbol{\mu}=\overrightarrow{0}$.
-\begin{table}[!htbp]
+\paragraph{Experiment setup.} We generate the synthetic  data from the GMR model~\eqref{eq:gauss:mixreg:model} with a  random design where we generate the feature vectors by drawing each $x_i \sim N(0,\Sigma)$. \ha{$\Sigma$ is drawn from a normalized Wishart distribution}.
+\aaa{Should mention how we choose $\Sigma$. I prefer drawing it from the Wishart distribution, but it might be different in your simulations.} Recall that $K$ is the number of clusters (or mixture components) and $R$ the number of groups. We will use equal number of observations per group, that is, $n_r$ is the same for all $r=1,\dots,R$. Letting $n = \sum_{r=1}^R n_r$ be the total number of observation, we will have $n_r = n/R = R/K$ in that case. Let $G_k$ be the number of groups in cluster $k$. In general, $\sum_{k=1}^K G_k = R$; here, we will take all $G_k$ equal so that \ha{$R = G_k\times K$} $G_k = G := R/K$. Thus, it is enough to specify $n, \ha{G_k,}$ and $K$. Table~\ref{tab:exp} summarizes various setups used in our simulations.
+We recall that $p$ is the dimension of the feature vectors $x_i$ ($p$) and ``the noise level'' is \ha{equivalent to} $\sigma_r$ in~\eqref{eq:gauss:mixreg:model}. In each case, the number of groups $R$ and the number of observations per group $n_r$ is determined by the number of clusters $G$ \ha{In each case, the number of groups $R$ and the number of observations per group $n_r$ is determined by the number of clusters $K$, number of groups in each cluster $G_k$, }and total number of observations $n$. For example, for $n = 800$, $G_k=10$, and $K=2$, we have $R = 20$ and $n_r = 40$. \aaa{This does not seem to be consistent with what you had before... } \ha{I made changes to be consistent with what we have done}.
+
+%Table~\ref{tab:exp} summarizes the varying parameters that is used for the simulation.
+%Covariates ($X \in {\rm I\!R}^p$) for each component are generated by drawing samples from a multivariate Gaussian distribution:  $X \sim  \mathcal{N}(\boldsymbol{{\mu}} , \boldsymbol{{\Sigma}})$, with $\boldsymbol{\mu}=\overrightarrow{0}$.
+\begin{table}[!t]
 \centering
 \caption{Monte Carlo Simulation Parameters}\label{tab:exp}
-\begin{tabular}{|l|l|l|l|l|l|}
+\begin{tabular}{|c|c|c|c|c|c|}
 \hline
-K & d      & S                   & N                                           & Noise Level                       & $\beta$ distance               \\ \hline
-2 & 2      & \multirow{2}{*}{10} & \multirow{2}{*}{(100, 200, 400, 800, 1600)} & \multirow{2}{*}{(2, 4, 6, 8, 10)} & \multirow{2}{*}{(4, 7, 11)} \\ \cline{1-2}
+$K$ & $d$      & $G_k$                   & $n$                                           & Noise Level $(\sigma_r)$                      & $\beta$-distance ($\delta_\beta$)               \\ \hline
+2 & 2      & \multirow{2}{*}{10} & \multirow{2}{*}{(100, 200, 400, 800)} & \multirow{2}{*}{(2, 4, 6, 8, 10)} & \multirow{2}{*}{(4, 7, 11)} \\ \cline{1-2}
 4 & (2, 4) &                     &                                             &                                   &                             \\ \hline
 \end{tabular}
 \end{table}
 
-Referring to table 1, $K$ is the number of components, $d$ is the dimension of independent variables ($p$), $S$ is the number of groups per component, and N is the total number of observations per component. As an example, there will be 10 observations per group for the case of N = 100, and 160 observations per group for when N = 1600. The response variable for each observation is generated by: $y_i= {X_i}^{'}\beta+Noise\; level$ . The "Noise level" is used as an indicator for the amount of noise (uncertainty) added to the response variable $y$.
 
-To study the effect of the degree of similarity between $\beta$s, depending on the experiment (choise of $K$ and $d$), we generated $K$ number of $d$ dimensional equidistant points. The points are selected from (hyper)sphere in a way that they all have equal norm and equal pairwise distant, e.g. for the case of $K=42$, $\left| \left| \beta _{1}\right| \right|= \left| \left|\beta _{2}\right| \right|= \left| \left|\beta _{3}\right| \right| = \left| \left|\beta _{4}\right| \right|$, and $\left| \left| \beta _{1}-\beta _{2}\right| \right| ^{2}= \left| \left| \beta _{1}-\beta _{3}\right| \right| ^{2} = \left| \left| \beta _{1}-\beta _{4}\right| \right| ^{2} = \left| \left| \beta _{2}-\beta _{3}\right| \right| ^{2} = \left| \left| \beta _{2}-\beta _{4}\right| \right| ^{2} = \left| \left| \beta _{3}-\beta _{4}\right| \right| ^{2}= "\beta \text{ distance}"$. Generating $\beta$s this wa enables us to calculate and compare the estimation error among different runs in a single experiment setup. The comparison can be carried out across different experiment setups by normalizing the calculated error, e.g. by the "$\beta$ distance".
-Three (3) "$\beta$ distance" values that are found to be sufficient for our purpose are selected (as shown in table~\ref{tab:exp}). Obviously, the smaller the distance, the closer the $\beta$s, and it is harder to separate the clusters.
+	
+%	,  $S$ is the number of groups per component, and N is the total number of observations per component. As an example, there will be 10 observations per group for the case of N = 100, and 160 observations per group for when N = 1600  The response variable for each observation is generated by: $y_i= {X_i}^{'}\beta+Noise\; level$ . The "Noise level" is used as an indicator for the amount of noise (uncertainty) added to the response variable $y$. \aaa{You can just refer to the model in~\eqref{eq:gauss:mixreg:model}... noise level is $\sigma_r$ }
+	
+	\aaa{Another idea for simulation: it would be interesting to somewhat vary $R$ from $1$ to $n$. It can't be 1, since $G$ needs to be an integer... we can vary $R$ as $K,2K,\dots, n$. The extreme case where there is only one observation per group, $n_r=1$ or $R = n$, is interesting since it reduces to the usual mixture of regression. By doing this simulation, we can study the effect of having more observation per group than just one.}
+	\ha{What $n$ is intended to do is to vary the num. of observations per group (with fixed $G_k$ and K, but the lowest is 10 observation per group while the highest is 40. I will proceed with this for now for my dissertation but will try to implement your suggestion before submitting the paper, enshaallah }
+	
+	To study the effect of heterogeneity among regression coefficient vectors $\beta_k, k \in [K]$, we take  $\beta_k$s to be equi-distance points on the unit sphere in $\reals^p$ and vary their common distance, denoted as $\delta_\beta$. More precisely, we will have $\norm{\beta_k} = 1$ \ha{$\norm{\beta_k} = \norm{\beta_\ell}$} and  $\norm{\beta_k - \beta_\ell} = \delta_\beta$ for all $k \neq \ell$ for all $k \neq \ell$. \aaa{Is this really the case, did you get the norm to be $1$ eventually?} \ha{No, they don't have norm 1 that is why I had to normalize the calculated error in each case} Generating $\beta$s this way enables us to compare the estimation errors among different runs of the experiment. The comparison can be carried out across different setups by normalizing the calculated error, e.g. by the $\beta$-distance.
+	Three values of the $\beta$ distances  sufficient for our purposes are selected (cf. Table~\ref{tab:exp}). Obviously, the smaller the distance, the closer the $\beta$s, and it is harder to separate the clusters.
+	
 
-\subsection{Evaluation Criterion}
-The Monte Carlo simulations are repeated 1000 times for each pair of $\beta$ distance and Noise level as well as pairs of d and K. Four criterion are used to benchmark the performance of the algorithm.
-\begin{itemize}
-\item Normalized Mutual Information (NMI): NMI is used for assessing the clustering accuracy. NMI is a widely used technique in evaluating the clustering result when the true labels are available. The advantage of using NMI is that it is independent of permutation, meaning that the label switching does not affect the NMI score. It is bounded between zero and one. The closer the value to zero, the higher the indication that the cluster assignments are largely independent, while NMI close to one shows substantial agreement between the clusters. An NMI value of zero simply means that the label assignment is purely random.
-\item $\beta$ estimation error: To calculate the error for estimating the coefficients of the components, we calculate the distance between the true and estimated $\beta$ by considering the miss-classification error as well. Let $C_k$ denote the (true) class $k$, and $\hat{C_r}$ denote the estimated class for group $r$. Equation \eqref{eq:bet_err} explains our approach:
-\begin{align}\label{eq:bet_err}
-\frac1n \sum_{i=1}^n \| \hat\beta^{(i)} - \beta^{(i)} \|^2 
-		&=\frac1n \sum_{i=1}^n\Big[
-		\sum_{r,k=1}^K  1\{ i \in C_k,  i \in \hat  C_r\}\Big] 
-		\| \hat\beta^{(i)} - \beta^{(i)} \|^2\\
-		&= \sum_{r,k=1}^K 	\frac1n \sum_{i=1}^n \Big[1\{ i \in C_k,  i \in \hat  C_r\}\Big]
-	\| \hat\beta^{(i)} - \beta^{(i)} \|^2 \\
-		&= \sum_{r,k=1}^K 	\frac1n \sum_{i=1}^n 1\{ i \in C_k,  i \in \hat  C_r\}\Big] 
-		\| \hat\beta_r - \beta_k \|^2 \\
-	   &=	 \sum_{r,k=1}^K 	\| \hat\beta_r - \beta_k \|^2	\frac1n \sum_{i=1}^n 1\{ i \in C_k,  i \in \hat  C_r\}\Big] 
-	   \\ &= \sum_{r,k=1}^K 	\| \hat\beta_r - \beta_k \|^2 R_{kr} \\
-	   &= \text{trace}(D^T R) = \sum_{k,r} D_{kr} R_{kr}	  
+%\medskip
+%To study the effect of the degree of similarity between $\beta$s, depending on the experiment (choise of $K$ and $d$), we generated $K$ number of $d$ dimensional equidistant points. The points are selected from (hyper)sphere in a way that they all have equal norm and equal pairwise distant, e.g. for the case of $K=42$,\aaa{use $\norm{\beta}$} $\left| \left| \beta _{1}\right| \right|= \left| \left|\beta _{2}\right| \right|= \left| \left|\beta _{3}\right| \right| = \left| \left|\beta _{4}\right| \right|$, and $\left| \left| \beta _{1}-\beta _{2}\right| \right| ^{2}= \left| \left| \beta _{1}-\beta _{3}\right| \right| ^{2} = \left| \left| \beta _{1}-\beta _{4}\right| \right| ^{2} = \left| \left| \beta _{2}-\beta _{3}\right| \right| ^{2} = \left| \left| \beta _{2}-\beta _{4}\right| \right| ^{2} = \left| \left| \beta _{3}-\beta _{4}\right| \right| ^{2}= "\beta \text{ distance}"$. 
+
+%Generating $\beta$s this wa enables us to calculate and compare the estimation error among different runs in a single experiment setup. The comparison can be carried out across different experiment setups by normalizing the calculated error, e.g. by the "$\beta$ distance".
+%Three (3) "$\beta$ distance" values that are found to be sufficient for our purpose are selected (as shown in table~\ref{tab:exp}). Obviously, the smaller the distance, the closer the $\beta$s, and it is harder to separate the clusters.
+
+\paragraph{Evaluation criteria.}
+The Monte Carlo simulations are repeated 1000 times for each pair of $\beta$-distance and  the noise level as well as pairs of $d$ and $K$. Four criterion are used to benchmark the performance of the algorithm: 
+
+ \begin{enumerate*}[label=(\arabic*)] 
+	\item Normalized mutual information (NMI) for assessing the clustering accuracy,
+	\item average $\beta$ estimation error,
+	\item root mean squared error (RMSE) of prediction to assess the prediction power of the models, and
+	\item the number of iterations to study the rate of convergence and the speed of the algorithm.,
+\end{enumerate*} 
+
+
+%Normalized Mutual Information (NMI) is used for assessing the clustering accuracy. 
+NMI is a widely used measure for evaluating quality of clustering algorithms when the true labels are available. Advantages of using NMI is that it is invariant to cluster label switching, and penalizes partitions close to random quite aggressively. NMI is  bounded between zero and one. The closer the value to zero, the higher the indication that the cluster assignments are largely independent, while NMI close to one shows substantial agreement between the clusters. %An NMI value of zero simply means that the label assignment is purely random.
+%\item 
+
+``$\beta$ estimation error'' is used as another measure of goodness of fit.  We calculate this error by considering both the distance between the true and estimated $\beta$s, as well as  the miss-classification error. More precisely, to each group $r$, we can assign two regression coefficient vectors,  the estimated one $\beh^{(r)}$, and the true one $\beta^{(r)}$; $\beh^{(r)}$ is equal to $\beh_k$ if we have estimated group $r$ to  be in cluster $k$. Similarly, $\beta^{(r)}$ is equal to $\beta_k$ if group $r$ is in true cluster $k$.  We can define the average $\beta$ estimation error as:
+
+\begin{align}
+\label{eq:avg:beta:err}
+\text{avg err}_{\beta} :=\frac1R \sum_{r=1}^R \vnorm{\beh^{(r)}- \beta^{(r)}}^2= \text{tr}(D^T \conf)
 \end{align}
-\noindent 
-where $R$ is the confusion matrix divided by $n$ (number of observations), and $D$ is the matrix that holds pairwise distance between $\beta$s. 
-\item Number of iterations: To study the rate of convergence and speed of the algorithm.
-\item Root Mean Squared Error (RMSE): To evaluate the prediction power of the models, the models are used to predict a testing dataset. RMSE of the testing dataset is reported. 
-\end{itemize}
- 
- 
+
+where $D=\big(\vnorm{\beh_k-\beh_\ell}^2, \; k, \ell \in [K] \big)$ is the $K\times K$ matrix of pairwise squared distances between $\beh_k$s, and $\conf$ is the confusion matrix between the estimated and true labels. The details for the second equality can be found in Appendix~\ref{sec:avg:beta:derivation}.
+Prediction RMSE is obtained by designating  a hold-out (or test) set and using the trained models to predict the responses over the hold-out set. \aaa{Maybe some detail about what fraction is } 
+\ha{In each simulation run, 80\% of the data is used in training, while 20 \% is used as hold-out set. } 
 \section{Result}
 In this section a detailed discussion about the result of the simulation is presented. Each factor of the study is presented in a sub-section.
 
@@ -503,35 +547,39 @@ In this section a detailed discussion about the result of the simulation is pres
 \label{sec:conc}
 \cleardoublepage
 \begin{appendices}
-\section{The EM updates}\label{sec:EM:details}
-We have to calculate expectation under $p_\theta(z_r = k|y_r)$ to obtain:
-\begin{align*}
-	F(\theta;\thh) = E_{z \sim \tau(\thh)} [\ell(\theta;z)] &=   \sum_{r=1}^R \sum_{k=1}^K \tau_{rk}(\thh) \Big[\log \pi_k + \sum_{i=1}^{n_r} \log \phi\Big( \frac{y_{ri} - \beta_k^T x_{ri}}{\sigma_r} \Big) \Big]\\
+\section{Derivations}
+
+\subsection{The EM updates in Algorithm~\ref{alg:gmr}}\label{sec:EM:details}
+
+Expanding the expected log-likelihood~\eqref{eq:exp_lik} using the definition of~$\gamma_{rk}(\theta)$ in~\eqref{eq:likelihod}, we have
+\begin{align}\label{eq:expanded:expec:likelihood}
+	F(\theta;\thh) = E_{z \sim \tau(\thh)} [\ell(\theta;z)]
 	&=\sum_{k=1}^K \tau_{+k}(\thh) \log \pi_k + 
-	\sum_{r=1}^R \sum_{k=1}^K \sum_{i=1}^{n_r}  \tau_{rk}(\thh) \log \phi\Big( \frac{y_{ri} - \beta_k^T x_{ri}}{\sigma_r} \Big)
-\end{align*}
+	\sum_{r=1}^R \sum_{k=1}^K \sum_{i=1}^{n_r}  \tau_{rk}(\thh) \log \phi_{\sigma_r}\big( y_{ri} - \beta_k^T x_{ri} \big).
+\end{align}
+where $\phi_\sigma(t) := (2\pi \sigma^2)^{-1/2} \exp(-\frac12 t^2/\sigma^2)$ is the density of $N(0,\sigma^2)$.
 
+We would like to maximize~\eqref{eq:expanded:expec:likelihood} over $\theta$. Recall that $\beta_k,x_{ri} \in \reals^p$ where $p$ is the number of features.
+We will use $\doteq_\pi$ for example, when the two sides are equal up to additive constants, as functions of $\pi$. Fixing everything and maximizing over $\pi = (\pi_1,\dots,\pi_k)$, we are maximizing $\pi \mapsto \sum_k \tau_{+k}(\thh) \log \pi_k$ over probability vector $\pi$. This is the MLE in the multinomial family and the solution is $\pi_k \propto_k \tau_{+k}$, that is
 
-We would like to maximize (7) over $\theta$. Note that $\beta_k,x_{rk} \in \reals^p$ ($p$ is the number of covariates).
-We will use $\doteq_\pi$ for example, when the two sides are equal upto additive constants, as functions of $\pi$. Fixing everything and maximizing over $\pi = (\pi_1,\dots,\pi_k)$, we are maximizing $\pi \mapsto \sum_k \tau_{+k}(\thh) \log \pi_k$ over probability vector $\pi$. This is the MLE in multinomial family and the solution is $\pi_k \propto_k \tau_{+k}$, that is
-	\begin{align}\label{eq:pi:update:1}
+\begin{align}\label{eq:pi:update:1}
 	    \pi_k = \frac{\tau_{+k}}{\sum_{k'} \tau_{+k'}}  = \frac{\tau_{+k}}{R}
 	\end{align}
 	where we used $\sum_{k'} \tau_{+k'} = \sum_{k'} \sum_r \tau_{rk'} = \sum_r \sum_{k'} \tau_{rk'} = \sum_r 1 = R$, since for fixed $r$, $\tau_{rk}$ sums to 1 over $k$.
 	
 	To maximize over $\beta$, we again fix everything else. Since $\log \phi_\sigma(t) \doteq_t -\frac12 (\log \sigma^2 + t^2/\sigma^2) $, we are maximizing
-	\begin{align}
+\begin{align}
 	    F(\theta;\thh)\; &\doteq_\beta\; -\sum_r \sum_k \sum_i^{n_r} 
-	    \tau_{rk}(\thh) \frac1{2\sigma_k^2} (y_{ri} - \beta_k^T x_{ri})^2 \\
+	    \tau_{rk}(\thh) \frac1{2\sigma_k^2} (y_{ri} - \beta_k^T x_{ri})^2 \notag\\
 	    &\doteq_\beta\; -\sum_r \sum_k \sum_i^{n_r} 
 	    \tau_{rk}(\thh) \frac1{2\sigma_k^2} [(\beta_k^T x_{ri})^2 - 2y_{ri}\beta_k^T x_{ri}] \label{eq:temp:1}
 	\end{align}
-	ignoring constant terms generated by $y_{ri}^2$. Note that $(\beta_k^T x_{ri})^2 = (\beta_k^T x_{ri})(x_{ri}^T \beta_k) = \beta_k^T (x_{ri}x_{ri}^T) \beta_k$. Similarly, $y_{ri}\beta_k^T x_{ri} = \beta_k^T(y_{ri} x_{ri})$. Let us define
+	ignoring the constant terms generated by $y_{ri}^2$. Note that $(\beta_k^T x_{ri})^2 = (\beta_k^T x_{ri})(x_{ri}^T \beta_k) = \beta_k^T (x_{ri}x_{ri}^T) \beta_k$. Similarly, $y_{ri}\beta_k^T x_{ri} = \beta_k^T(y_{ri} x_{ri})$. Let us define
 	\begin{align}\label{eq:hat:def}
 	    \Sigh_r := \frac1{n_r}\sum_{i=1}^{n_r} x_{ri} x_{ri}^T, \quad 
 	    \rhoh_r :=  \frac1{n_r}\sum_{i=1}^{n_r} y_{ri} x_{ri}
 	\end{align}
-	Summing over $i$ first in~\eqref{eq:temp:1}, we get
+Summing over $i$ first in~\eqref{eq:temp:1}, we get
 	\begin{align}
 	     F(\theta;\thh)\; 
 	    &\doteq_\beta\; -\sum_r \sum_k
@@ -540,38 +588,39 @@ We will use $\doteq_\pi$ for example, when the two sides are equal upto additive
 	     \sum_r\tau_{rk} n_r[ \beta_k^T \Sigh_r \beta_k - 2 \beta_k^T \rhoh_r]
 	     \label{eq:temp:2}
 	\end{align}
-
-	
-	Let us define 
-	\begin{align}\label{eq:w:def}
-	    w_{rk} :=  n_r \tau_{rk}, \quad \wc_{rk} := \frac{w_{rk}}{w_{+k}}
+	Let us define $w_{rk} :=  n_r \tau_{rk}$ and $\wc_{rk} := w_{rk}/w_{+k}$ where $w_{+k} = \sum_r n_r\tau_{rk}$, and let
+	\begin{align}\label{eq:tilde:def}
+	    \Sigt_k := \sum_{r=1}^R \wc_{rk} \Sigh_r, \quad 
+	    \rhot_k := \sum_{r=1}^R \wc_{rk}  \rhoh_r.
 	\end{align}
-	 where $w_{+k} = \sum_r n_r\tau_{rk}$. Let
+Summing over $i$ first in~\eqref{eq:temp:1}, we get
+	\begin{align}
+	     F(\theta;\thh)\; 
+	    &\doteq_\beta\; -\sum_r \sum_k
+	     \frac{\tau_{rk}}{2\sigma_k^2} n_r[ \beta_k^T \Sigh_r \beta_k - 2 \beta_k^T \rhoh_r] \notag \\
+	    &=  - \sum_k \frac1{2\sigma_k^2}
+	     \sum_r\tau_{rk} n_r[ \beta_k^T \Sigh_r \beta_k - 2 \beta_k^T \rhoh_r]
+	     \label{eq:temp:2}
+	\end{align}
+	Let us define $w_{rk} :=  n_r \tau_{rk}$ and $\wc_{rk} := w_{rk}/w_{+k}$ where $w_{+k} = \sum_r n_r\tau_{rk}$, and let
 	\begin{align}\label{eq:tilde:def}
 	    \Sigt_k := \sum_{r=1}^R \wc_{rk} \Sigh_r, \quad 
 	    \rhot_k := \sum_{r=1}^R \wc_{rk}  \rhoh_r.
 	\end{align}
 	Dividing and multiplying by $w_{+k}$ and summing over $r$ in~\eqref{eq:temp:2}, we get
-	\begin{align}
-	    F(\theta;\thh)\; 
-	    &\doteq_\beta\; -\sum_k \frac{w_{+k}}{2\sigma_k^2} [\beta_k^T \Sigt_k \beta_k - 2 \beta_k^T \rhot_k]
-	\end{align}
-	The problem is separable in $k$, and the minimizer over $\beta_k$ is
-	\begin{align}
-	    \beta_k = \Sigt_k^{-1} \rhot_k
-	\end{align}
-
-	\bigskip
+	%\begin{align}
+	    $F(\theta;\thh)
+	    \doteq_\beta -\sum_k \frac{w_{+k}}{2\sigma_k^2} [\beta_k^T \Sigt_k \beta_k - 2 \beta_k^T \rhot_k]$.
+	%\end{align}
+	The problem is separable in $k$, and the minimizer over $\beta_k$ is $\beta_k = \Sigt_k^{-1} \rhot_k$.
+	
+	\medskip
 	To optimize over $\alpha_k:=\sigma_k^2$, let us fix everything else. We have
 	\begin{align}\label{eq:temp:495}
 	    F(\theta;\thh) \doteq_{\alpha} -\frac12 \sum_k \Big[ \sum_r \sum_i^{n_r} \tau_{rk} \log \alpha_k + \sum_r \sum_i^{n_r} 
-	    \tau_{rk}\frac{(y_{ri} - \beta_k^T x_{ri})^2}{\alpha_k}\Big]
+	    \tau_{rk}\frac{(y_{ri} - \beta_k^T x_{ri})^2}{\alpha_k}\Big].
 	\end{align}
-	The first term in brackets is
-	 $(\sum_r n_r \tau_{rk}) \log \alpha_k = w_{+k} \log \alpha_k$. See~\eqref{eq:w:def}.
-	%
-	
-	Defining
+	The first term in brackets is 	 $(\sum_r n_r \tau_{rk}) \log \alpha_k = w_{+k} \log \alpha_k$. Defining
 	\begin{align}
 	    E_{rk} := E_{rk}(\beta) := \frac1{n_r}\sum_{i}^{n_r}   (y_{ri} - \beta_k^T x_{ri})^2, \qquad 
 	    \Eb_k := \Eb_k(\beta) := \sum_r \wc_{rk} E_{rk}.
@@ -581,38 +630,21 @@ We will use $\doteq_\pi$ for example, when the two sides are equal upto additive
 	     F(\theta;\thh)   \doteq_{\alpha}
 	     -\frac12 \sum_k w_{+k} \Big[  \log \alpha_k + \frac{\Eb_k}{\alpha_k}\Big]
 	\end{align}
-	This problem is separable in $\alpha_k$ and the solution is $\alpha_k = \Eb_k$.
+	This problem is separable in $\alpha_k$ and the solution is $\alpha_k = \Eb_k$. Putting the pieces together, we obtain the Algorithm~\ref{alg:gmr}.
 
-	\medskip
-	To summarize, we sequentially update the parameters ($\theta$) as follows ($[K] := \{1,\dots,K\}$)
-	\begin{align}
-	    \pi_k &= \tau_{+k}/R, \quad k \in [K] \\
-	    \beta_k &= \Sigt_k^{-1} \rhot_k,\quad  k \in [K] \\
-	    \sigma^2_k &= \Eb_k(\beta), \quad k \in [K]
-	\end{align}
+\subsection{Details of~\eqref{eq:avg:beta:err}} \label{sec:avg:beta:derivation}
+Let $\Ch_k \subset [R]$ be the $k$th estimated cluster (the set containing  indices of the groups estimated to be in cluster $k$) and $\zh_{r} \in \{0,1\}^K$ the estimated membership vector for group $r$, so that $\zh_{rk} = 1\{r \in \Ch_k\}$. Similarly, let $C_k \subset [R]$ be the true cluster $k$ and $z_{r}$ the true label vector for group $r$, so that $z_{rk} = 1\{z_r \in C_k\}$. The normalized confusion matrix $ \conf =(\conf_{k \ell})\in [0,1]^{K \times K}$  between the two sets of labels is given by
+$
+\conf_{k\ell} = \frac1R \sum_{r=1}^R z_{rk} \; \zh_{r\ell} = \frac1R \sum_{r=1} 1\{r \in C_k, \, r \in \Ch_\ell \}.
+$
+%Let $\Ch_k \subset [R]$ be the $k$th estimated cluster (the set containing  indices of the groups estimated to be in cluster $k$) and $\zh_{r} \in \{0,1\}^K$ the estimated membership vector for group $r$, so that $\zh_{rk} = 1\{r \in \Ch_k\}$. Similarly, let $C_k \subset [R]$ be the true cluster $k$ and $z_{r}$ the true label vector for group $r$, so that $z_{rk} = 1\{z_r \in C_k\}$. The normalized confusion matrix $ \conf = (\F_{k \ell}) \in [0,1]^{K \times K}$  between the two sets of labels is given by 
+%$
+%\F_{k\ell} = \frac1R \sum_{r=1}^R z_{rk} \; \zh_{r\ell} = \frac1R \sum_{r=1} 1\{r \in C_k, \, r \in \Ch_\ell \}.
+%$
+
+
 \end{appendices}
 
-\begin{align}
-	\frac1n \sum_{i=1}^n \| \hat\beta^{(i)} - \beta^{(i)} \|^2 
-		&=\frac1n \sum_{i=1}^n\Big[
-		\sum_{r,k=1}^K  1\{ i \in C_k,  i \in \hat  C_r\}\Big] 
-		\| \hat\beta^{(i)} - \beta^{(i)} \|^2\\
-		&= \sum_{r,k=1}^K 	\frac1n \sum_{i=1}^n \Big[1\{ i \in C_k,  i \in \hat  C_r\}\Big]
-	\| \hat\beta^{(i)} - \beta^{(i)} \|^2 \\
-		&= \sum_{r,k=1}^K 	\frac1n \sum_{i=1}^n 1\{ i \in C_k,  i \in \hat  C_r\}\Big] 
-		\| \hat\beta_r - \beta_k \|^2 \\
-	   &=	 \sum_{r,k=1}^K 	\| \hat\beta_r - \beta_k \|^2	\frac1n \sum_{i=1}^n 1\{ i \in C_k,  i \in \hat  C_r\}\Big] 
-	   \\ &= \sum_{r,k=1}^K 	\| \hat\beta_r - \beta_k \|^2 R_{kr} \\
-	   &= \text{trace}(D^T R) = \sum_{k,r} D_{kr} R_{kr}
-\end{align}
-
-\begin{align*}
-	\frac1n \sum_{i=1}^n \| \hat\beta^{(i)} - \beta^{(i)} \|^2 
-		&=\frac1n \sum_{i=1}^n\Big[
-		\sum_{r,k=1}^K  1\{ i \in C_k,  i \in \hat  C_r\}\Big] 
-		\| \hat\beta^{(i)} - \beta^{(i)} \|^2\\
-	   &=	 \sum_{r,k=1}^K 	\| \hat\beta_r - \beta_k \|^2	\frac1n \sum_{i=1}^n 1\{ i \in C_k,  i \in \hat  C_r\}\Big] 
-\end{align*}
 
 \cleardoublepage
 
